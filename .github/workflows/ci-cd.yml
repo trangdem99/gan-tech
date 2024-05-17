@@ -23,10 +23,15 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
+      
     - name: Build project
       run: npm run build
 
+    - name: Configure Git
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+    
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
       run: |
