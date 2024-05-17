@@ -10,6 +10,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://trangdem99.github.io/gan-tech",
   "author": "trangdem99",
   "license": "MIT",
   "dependencies": {
