@@ -1,23 +1,45 @@
-name: Deploy
+name: CI/CD
 
 on:
   push:
     branches:
-      - "main" # change to the branch you wish to deploy from
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.build-publish.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.3
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
       with:
-        path: build # change to your build folder
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test --if-present
+
+    - name: Build project
+      run: npm run build
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "dev.trangdem99@gmail.com"
+        git config --global user.name "trangdem99"
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        npm install -g gh-pages
+        npm run build
+        gh-pages -d build -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
