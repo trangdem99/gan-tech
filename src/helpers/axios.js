@@ -2,7 +2,7 @@ import axios from "axios"
 
 // content type
 axios.defaults.headers.post["Content-Type"] = "application/json"
-axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000/" : document.location.origin
+axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000/" : "https://trangdem99.github.io/gan-tech/"
 
 axios.interceptors.request.use(
   async function (config) {
