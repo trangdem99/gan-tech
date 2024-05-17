@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/gan-tech/static/css/main.41081411.css",
+    "main.js": "/gan-tech/static/js/main.f3b09998.js",
+    "static/js/443.bf8fc120.chunk.js": "/gan-tech/static/js/443.bf8fc120.chunk.js",
+    "static/js/728.650fa0e9.chunk.js": "/gan-tech/static/js/728.650fa0e9.chunk.js",
+    "static/js/107.d90e9eb0.chunk.js": "/gan-tech/static/js/107.d90e9eb0.chunk.js",
+    "static/js/928.37e9f419.chunk.js": "/gan-tech/static/js/928.37e9f419.chunk.js",
+    "static/js/480.9b2abc93.chunk.js": "/gan-tech/static/js/480.9b2abc93.chunk.js",
+    "index.html": "/gan-tech/index.html",
+    "main.41081411.css.map": "/gan-tech/static/css/main.41081411.css.map",
+    "main.f3b09998.js.map": "/gan-tech/static/js/main.f3b09998.js.map",
+    "443.bf8fc120.chunk.js.map": "/gan-tech/static/js/443.bf8fc120.chunk.js.map",
+    "728.650fa0e9.chunk.js.map": "/gan-tech/static/js/728.650fa0e9.chunk.js.map",
+    "107.d90e9eb0.chunk.js.map": "/gan-tech/static/js/107.d90e9eb0.chunk.js.map",
+    "928.37e9f419.chunk.js.map": "/gan-tech/static/js/928.37e9f419.chunk.js.map",
+    "480.9b2abc93.chunk.js.map": "/gan-tech/static/js/480.9b2abc93.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41081411.css",
+    "static/js/main.f3b09998.js"
+  ]
+}
