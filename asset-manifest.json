@@ -1,23 +1,21 @@
 {
   "files": {
     "main.css": "/gan-tech/static/css/main.41081411.css",
-    "main.js": "/gan-tech/static/js/main.d77b5b64.js",
-    "static/js/443.90c19fa7.chunk.js": "/gan-tech/static/js/443.90c19fa7.chunk.js",
-    "static/js/728.f19afe27.chunk.js": "/gan-tech/static/js/728.f19afe27.chunk.js",
-    "static/js/107.d90e9eb0.chunk.js": "/gan-tech/static/js/107.d90e9eb0.chunk.js",
-    "static/js/928.37e9f419.chunk.js": "/gan-tech/static/js/928.37e9f419.chunk.js",
-    "static/js/480.9b2abc93.chunk.js": "/gan-tech/static/js/480.9b2abc93.chunk.js",
+    "main.js": "/gan-tech/static/js/main.b98976fe.js",
+    "static/js/443.9d75e732.chunk.js": "/gan-tech/static/js/443.9d75e732.chunk.js",
+    "static/js/107.289bfbf3.chunk.js": "/gan-tech/static/js/107.289bfbf3.chunk.js",
+    "static/js/928.953acf3d.chunk.js": "/gan-tech/static/js/928.953acf3d.chunk.js",
+    "static/js/480.562b8cc3.chunk.js": "/gan-tech/static/js/480.562b8cc3.chunk.js",
     "index.html": "/gan-tech/index.html",
     "main.41081411.css.map": "/gan-tech/static/css/main.41081411.css.map",
-    "main.d77b5b64.js.map": "/gan-tech/static/js/main.d77b5b64.js.map",
-    "443.90c19fa7.chunk.js.map": "/gan-tech/static/js/443.90c19fa7.chunk.js.map",
-    "728.f19afe27.chunk.js.map": "/gan-tech/static/js/728.f19afe27.chunk.js.map",
-    "107.d90e9eb0.chunk.js.map": "/gan-tech/static/js/107.d90e9eb0.chunk.js.map",
-    "928.37e9f419.chunk.js.map": "/gan-tech/static/js/928.37e9f419.chunk.js.map",
-    "480.9b2abc93.chunk.js.map": "/gan-tech/static/js/480.9b2abc93.chunk.js.map"
+    "main.b98976fe.js.map": "/gan-tech/static/js/main.b98976fe.js.map",
+    "443.9d75e732.chunk.js.map": "/gan-tech/static/js/443.9d75e732.chunk.js.map",
+    "107.289bfbf3.chunk.js.map": "/gan-tech/static/js/107.289bfbf3.chunk.js.map",
+    "928.953acf3d.chunk.js.map": "/gan-tech/static/js/928.953acf3d.chunk.js.map",
+    "480.562b8cc3.chunk.js.map": "/gan-tech/static/js/480.562b8cc3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41081411.css",
-    "static/js/main.d77b5b64.js"
+    "static/js/main.b98976fe.js"
   ]
 }

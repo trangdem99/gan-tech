@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgan_tech=self.webpackChunkgan_tech||[]).push([[443],{443:(e,a,s)=>{s.r(a),s.d(a,{default:()=>l});var n=s(43),r=s(579);function l(){return(0,r.jsx)(n.Fragment,{children:(0,r.jsx)("div",{id:"global-loader",children:(0,r.jsx)("img",{src:"./assets/images/loader.svg",alt:"Loading..."})})})}}}]);
+//# sourceMappingURL=443.9d75e732.chunk.js.map
