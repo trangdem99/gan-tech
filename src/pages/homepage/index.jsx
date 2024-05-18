@@ -20,6 +20,7 @@ import {
 import Layout from '../../layouts';
 
 import './index.css';
+import Image from '../../components/image';
 
 export default function Homepage() {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -56,7 +57,7 @@ export default function Homepage() {
         <div className="p-1 p-sm-2 p-md-3 p-lg-4">
           <Container fluid className="mt-5 mb-5">
             <Row className="justify-content-center">
-              <Col xs="11">
+              <Col xs="11" style={{minHeight: "35vh"}}>
                 <Carousel
                   activeIndex={activeIndex}
                   next={next}
@@ -74,7 +75,7 @@ export default function Homepage() {
                           onExited={() => setAnimating(false)}
                           key={`carousel-${index}`}
                         >
-                          <img src={carousel.image} alt={carousel.title} className="img-fluid" />
+                          <Image src={carousel.image} alt={carousel.name} className="img-fluid" />
                         </CarouselItem>
                       )
                     })
@@ -95,7 +96,7 @@ export default function Homepage() {
                   md="6"
                   className={`py-3 py-md-4 ${index % 2 === 0 ? "order-md-last" : ""}`}
                 >
-                  <img src={service.image} alt={service.name} className="img-fluid" />
+                  <Image src={service.image} alt={service.name} className="img-fluid" />
                 </Col>
                 <Col
                   xs="12"

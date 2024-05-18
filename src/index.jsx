@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore({
   "reducer": rootReducer,
   "devTools": process.env.NODE_ENV !== "production", 
-})
+});
 
 root.render(
   <Provider store={store}>

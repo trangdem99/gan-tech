@@ -16,7 +16,7 @@ import {
   Offcanvas,
   OffcanvasHeader,
   OffcanvasBody,
-  NavLink as ReactstrapNavLink
+  NavLink
 } from 'reactstrap';
 
 //redux
@@ -26,6 +26,7 @@ import {
 import {
   createSelector 
 } from "@reduxjs/toolkit";
+import Image from '../../components/image';
 
 // Custom CSS class for links
 const linkStyle = {
@@ -55,10 +56,8 @@ export default function NavBar() {
     <React.Fragment>
       <div className="bg-white sticky-top justify-items-center">
         <Navbar className="mx-5" expand="lg">
-          <NavbarBrand className="col-3">
-            <Link to="/" style={linkStyle}>
-              <img src={process.env.PUBLIC_URL + "/assets/images/logo.webp"}  width="80" height="32" alt="logo" />
-            </Link>
+          <NavbarBrand className="col-3" tag={Link} to="/" style={linkStyle}>
+            <Image src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} width="80" height="32" alt="logo" />
           </NavbarBrand>
           
           <NavbarToggler onClick={toggle} />
@@ -68,14 +67,14 @@ export default function NavBar() {
             <OffcanvasBody>
               <Nav className="me-auto my-2 my-lg-0 mx-auto" navbar>
                 <NavItem active={location.pathname === "/"}>
-                  <ReactstrapNavLink tag={Link} to="/" style={linkStyle}>
+                  <NavLink tag={Link} to="/" style={linkStyle}>
                     Trang chủ
-                  </ReactstrapNavLink>
+                  </NavLink>
                 </NavItem>
                 <NavItem active={location.pathname === "/gioi-thieu"}>
-                  <ReactstrapNavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
+                  <NavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
                     Giới thiệu
-                  </ReactstrapNavLink>
+                  </NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret className={location.pathname.includes("/san-pham") ? "active" : ""}>
@@ -111,17 +110,17 @@ export default function NavBar() {
 
           <Nav className="d-none d-md-flex col-6 my-2 my-lg-0 justify-content-center" navbar>
             <NavItem active={location.pathname === "/"}>
-              <ReactstrapNavLink tag={Link} to="/" style={linkStyle}>
+              <NavLink tag={Link} to="/" style={linkStyle}>
                 Trang chủ
-              </ReactstrapNavLink>
+              </NavLink>
             </NavItem>
             <NavItem active={location.pathname === "/gioi-thieu"}>
-              <ReactstrapNavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
+              <NavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
                 Giới thiệu
-              </ReactstrapNavLink>
+              </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className={location.pathname.includes("/san-pham")}>
+              <DropdownToggle nav caret className={location.pathname.includes("/san-pham") ? "active" : ""}>
                 Sản phẩm
               </DropdownToggle>
               <DropdownMenu end>
@@ -135,7 +134,7 @@ export default function NavBar() {
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className={location.pathname.includes("/dich-vu")}>
+              <DropdownToggle nav caret className={location.pathname.includes("/dich-vu") ? "active" : ""}>
                 Dịch vụ
               </DropdownToggle>
               <DropdownMenu end>
