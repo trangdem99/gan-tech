@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build --base=/gan-tech",
+    "build": "react-scripts build",
     "help": "react-scripts --help",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
