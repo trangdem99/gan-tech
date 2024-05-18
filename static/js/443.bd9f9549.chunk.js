@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgan_tech=self.webpackChunkgan_tech||[]).push([[443],{443:(e,a,t)=>{t.r(a),t.d(a,{default:()=>i});var n=t(43),s=t(579);function i(){return(0,s.jsx)(n.Fragment,{children:(0,s.jsx)("div",{id:"global-loader",children:(0,s.jsx)("img",{src:"https://trangdem99.github.io/gan-tech/assets/img/loader.gif",alt:"Loading..."})})})}}}]);
+//# sourceMappingURL=443.bd9f9549.chunk.js.map
