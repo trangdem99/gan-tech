@@ -57,7 +57,7 @@ export default function NavBar() {
         <Navbar className="mx-5" expand="lg">
           <NavbarBrand className="col-3">
             <Link to="/" style={linkStyle}>
-              <img src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} alt="Logo" />
+              <img src={process.env.PUBLIC_URL + "/assets/images/logo.webp"}  width="80" height="32" alt="logo" />
             </Link>
           </NavbarBrand>
           
@@ -109,48 +109,46 @@ export default function NavBar() {
             </OffcanvasBody>
           </Offcanvas>
 
-          {!is_open && (
-            <Nav className="me-auto my-2 my-lg-0 mx-auto" navbar>
-              <NavItem active={location.pathname === "/"}>
-                <ReactstrapNavLink tag={Link} to="/" style={linkStyle}>
-                  Trang chủ
-                </ReactstrapNavLink>
-              </NavItem>
-              <NavItem active={location.pathname === "/gioi-thieu"}>
-                <ReactstrapNavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
-                  Giới thiệu
-                </ReactstrapNavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret className={location.pathname.includes("/san-pham")}>
-                  Sản phẩm
-                </DropdownToggle>
-                <DropdownMenu end>
-                  {data.products.map((product, index) => (
-                    <DropdownItem key={index}>
-                      <Link to={`/san-pham/${product.slug}`} style={linkStyle}>
-                        {product.name}
-                      </Link>
-                    </DropdownItem>
-                  ))}
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret className={location.pathname.includes("/dich-vu")}>
-                  Dịch vụ
-                </DropdownToggle>
-                <DropdownMenu end>
-                  {data.services.map((service, index) => (
-                    <DropdownItem key={index}>
-                      <Link to={`/dich-vu/${service.slug}`} style={linkStyle}>
-                        {service.name}
-                      </Link>
-                    </DropdownItem>
-                  ))}
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          )}
+          <Nav className="d-none d-md-block col-6 me-auto my-2 my-lg-0 mx-auto" navbar>
+            <NavItem active={location.pathname === "/"}>
+              <ReactstrapNavLink tag={Link} to="/" style={linkStyle}>
+                Trang chủ
+              </ReactstrapNavLink>
+            </NavItem>
+            <NavItem active={location.pathname === "/gioi-thieu"}>
+              <ReactstrapNavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
+                Giới thiệu
+              </ReactstrapNavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret className={location.pathname.includes("/san-pham")}>
+                Sản phẩm
+              </DropdownToggle>
+              <DropdownMenu end>
+                {data.products.map((product, index) => (
+                  <DropdownItem key={index}>
+                    <Link to={`/san-pham/${product.slug}`} style={linkStyle}>
+                      {product.name}
+                    </Link>
+                  </DropdownItem>
+                ))}
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret className={location.pathname.includes("/dich-vu")}>
+                Dịch vụ
+              </DropdownToggle>
+              <DropdownMenu end>
+                {data.services.map((service, index) => (
+                  <DropdownItem key={index}>
+                    <Link to={`/dich-vu/${service.slug}`} style={linkStyle}>
+                      {service.name}
+                    </Link>
+                  </DropdownItem>
+                ))}
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
 
           <div className="d-none d-md-block col-3 text-end">
             Address: {data.address} <br />

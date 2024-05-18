@@ -77,8 +77,8 @@ export default function Homepage() {
                       )
                     })
                   }
-                  <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-                  <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+                  <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} className="bg-secondary" />
+                  <CarouselControl direction="next" directionText="Next" onClickHandler={next} className="bg-secondary" />
                 </Carousel>
               </Col>
             </Row>
