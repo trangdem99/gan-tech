@@ -109,7 +109,7 @@ export default function NavBar() {
             </OffcanvasBody>
           </Offcanvas>
 
-          <Nav className="d-none d-md-block col-6 me-auto my-2 my-lg-0 mx-auto" navbar>
+          <Nav className="d-none d-md-flex col-6 my-2 my-lg-0 justify-content-center" navbar>
             <NavItem active={location.pathname === "/"}>
               <ReactstrapNavLink tag={Link} to="/" style={linkStyle}>
                 Trang chủ

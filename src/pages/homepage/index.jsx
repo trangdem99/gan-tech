@@ -19,6 +19,8 @@ import {
 
 import Layout from '../../layouts';
 
+import './index.css';
+
 export default function Homepage() {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
