@@ -17,11 +17,11 @@ import {
 
 import Loader from './components/loader';
 
-// const Homepage = React.lazy(() => import('./pages/homepage'));
-// const Introduction = React.lazy(() => import('./pages/introduction'));
+const Homepage = React.lazy(() => import('./pages/homepage'));
+const Introduction = React.lazy(() => import('./pages/introduction'));
 
-import Homepage from './pages/homepage';
-import Introduction from './pages/introduction';
+// import Homepage from './pages/homepage';
+// import Introduction from './pages/introduction';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -44,12 +44,12 @@ export default function App() {
     <Loader />
   ) : (
     <React.Fragment>
-      {/* <React.Suspense fallback={<Loader />}> */}
+      <React.Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/gioi-thieu" element={<Introduction />} />
         </Routes>
-      {/* </React.Suspense> */}
+      </React.Suspense>
     </React.Fragment>
   );
 };
