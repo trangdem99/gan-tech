@@ -37,16 +37,14 @@ export default function App() {
     dispatch(getSetting());
   }, []);
   
-  return is_loading ? (
+  return is_loading || !is_success ? (
     <Loader />
-  ) : is_success ? (
+  ) : (
     <React.Fragment>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/gioi-thieu" element={<Introduction />} />
       </Routes>
     </React.Fragment>
-  ) : (
-    <div>Error</div>
   );
 };
