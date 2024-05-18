@@ -2,7 +2,7 @@ import axios from "axios"
 
 // content type
 axios.defaults.headers.post["Content-Type"] = "application/json"
-axios.defaults.baseURL = process.env.PUBLIC_URL
+axios.defaults.baseURL = process.env.REACT_APP_BASENAME
 
 axios.interceptors.request.use(
   async function (config) {

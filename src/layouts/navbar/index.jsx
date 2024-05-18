@@ -81,11 +81,12 @@ export default function NavBar() {
                     Sản phẩm
                   </DropdownToggle>
                   <DropdownMenu end>
+                    <DropdownItem tag={Link} to="/san-pham" style={linkStyle}>
+                      Tất cả sản phẩm
+                    </DropdownItem>
                     {data.products.map((product, index) => (
-                      <DropdownItem key={index}>
-                        <Link to={`/san-pham/${product.slug}`} style={linkStyle}>
-                          {product.name}
-                        </Link>
+                      <DropdownItem key={`product-${index}`} tag={Link} to={`/san-pham/${product.slug}`} style={linkStyle}>
+                        {product.name}
                       </DropdownItem>
                     ))}
                   </DropdownMenu>
@@ -95,11 +96,12 @@ export default function NavBar() {
                     Dịch vụ
                   </DropdownToggle>
                   <DropdownMenu end>
+                    <DropdownItem tag={Link} to="/dich-vu" style={linkStyle}>
+                      Tất cả dịch vụ
+                    </DropdownItem>
                     {data.services.map((service, index) => (
-                      <DropdownItem key={index}>
-                        <Link to={`/dich-vu/${service.slug}`} style={linkStyle}>
-                          {service.name}
-                        </Link>
+                      <DropdownItem key={`service-${index}`} tag={Link} to={`/dich-vu/${service.slug}`} style={linkStyle}>
+                        {service.name}
                       </DropdownItem>
                     ))}
                   </DropdownMenu>
@@ -124,11 +126,12 @@ export default function NavBar() {
                 Sản phẩm
               </DropdownToggle>
               <DropdownMenu end>
+                <DropdownItem tag={Link} to="/san-pham" style={linkStyle}>
+                  Tất cả sản phẩm
+                </DropdownItem>
                 {data.products.map((product, index) => (
-                  <DropdownItem key={index}>
-                    <Link to={`/san-pham/${product.slug}`} style={linkStyle}>
-                      {product.name}
-                    </Link>
+                  <DropdownItem key={`product-${index}`} tag={Link} to={`/san-pham/${product.slug}`} style={linkStyle}>
+                    {product.name}
                   </DropdownItem>
                 ))}
               </DropdownMenu>
@@ -138,11 +141,12 @@ export default function NavBar() {
                 Dịch vụ
               </DropdownToggle>
               <DropdownMenu end>
+                <DropdownItem tag={Link} to="/dich-vu" style={linkStyle}>
+                  Tất cả dịch vụ
+                </DropdownItem>
                 {data.services.map((service, index) => (
-                  <DropdownItem key={index}>
-                    <Link to={`/dich-vu/${service.slug}`} style={linkStyle}>
-                      {service.name}
-                    </Link>
+                  <DropdownItem key={`service-${index}`} tag={Link} to={`/dich-vu/${service.slug}`} style={linkStyle}>
+                    {service.name}
                   </DropdownItem>
                 ))}
               </DropdownMenu>

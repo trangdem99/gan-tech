@@ -1,5 +1,7 @@
 import React from 'react';
-
+import {
+  Container,
+} from 'reactstrap';
 import Layout from '../../layouts';
 
 //redux
@@ -23,13 +25,9 @@ export default function Introduction() {
   return (
     <React.Fragment>
       <Layout>
-        <main className="p-1 p-sm-2 p-md-3 p-lg-4" id="main">
-          <div className="container">
-            <section className="py-5">
-              <div dangerouslySetInnerHTML={{__html: data.description.full_content}}></div>
-            </section>
-          </div>
-        </main>
+        <Container className="p-1 p-sm-2 p-md-3 p-lg-4" id="main">
+          <div dangerouslySetInnerHTML={{__html: data.description.full_content}} className="py-5"></div>
+        </Container>
       </Layout>
     </React.Fragment>
   );

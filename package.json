@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://trangdem99.github.io/gan-tech/",
+  "homepage": "https://trangdem99.github.io",
   "author": "trangdem99",
   "license": "MIT",
   "dependencies": {

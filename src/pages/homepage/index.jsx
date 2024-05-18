@@ -23,6 +23,8 @@ import './index.css';
 import Image from '../../components/image';
 
 export default function Homepage() {
+  // State to track the number of visible items
+  const [visibleItems] = React.useState(4);
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
   const {
@@ -54,41 +56,40 @@ export default function Homepage() {
   return (
     <React.Fragment>
       <Layout>
-        <div className="p-1 p-sm-2 p-md-3 p-lg-4">
-          <Container fluid className="mt-5 mb-5">
-            <Row className="justify-content-center">
-              <Col xs="11" style={{minHeight: "35vh"}}>
-                <Carousel
-                  activeIndex={activeIndex}
-                  next={next}
-                  previous={previous}
-                  ride="carousel"
-                  interval={5000}
-                  className="text-center"
-                >
-                  <CarouselIndicators items={data.carousels} activeIndex={activeIndex} onClickHandler={goToIndex} />
-                  {
-                    data.carousels.map((carousel, index) => {
-                      return (
-                        <CarouselItem
-                          onExiting={() => setAnimating(true)}
-                          onExited={() => setAnimating(false)}
-                          key={`carousel-${index}`}
-                        >
-                          <Image src={carousel.image} alt={carousel.name} className="img-fluid" />
-                        </CarouselItem>
-                      )
-                    })
-                  }
-                  <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-                  <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-                </Carousel>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <Container fluid className="p-1 p-sm-2 p-md-3 p-lg-4 mt-5 mb-5">
+          <Row className="justify-content-center">
+            <Col xs="11" style={{minHeight: "35vh"}}>
+              <Carousel
+                activeIndex={activeIndex}
+                next={next}
+                previous={previous}
+                ride="carousel"
+                interval={5000}
+                className="text-center"
+              >
+                <CarouselIndicators items={data.carousels} activeIndex={activeIndex} onClickHandler={goToIndex} />
+                {
+                  data.carousels.map((carousel, index) => {
+                    return (
+                      <CarouselItem
+                        onExiting={() => setAnimating(true)}
+                        onExited={() => setAnimating(false)}
+                        key={`carousel-${index}`}
+                      >
+                        <Image src={carousel.image} alt={carousel.name} className="img-fluid" />
+                      </CarouselItem>
+                    )
+                  })
+                }
+                <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+              </Carousel>
+            </Col>
+          </Row>
+        </Container>
+      
         {
-          data.services.map((service, index) => (
+          data.services.slice(0, visibleItems).map((service, index) => (
             <Container className="mt-5 mb-5" key={`service-${index}`}>
               <Row>
                 <Col

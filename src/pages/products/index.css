@@ -1,0 +1,16 @@
+/* Services.css */
+.equal-height-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.equal-height-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.equal-height-card .card-text {
+  flex-grow: 1;
+}
