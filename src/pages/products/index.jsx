@@ -59,7 +59,7 @@ export default function Products() {
           </Row>
           {visibleItems < data.products.length && (
             <div className="text-center mt-3">
-              <Button onClick={showMoreItems} color="primary">Hiện thị thêm</Button>
+              <Button onClick={showMoreItems} color="primary">Hiển thị thêm</Button>
             </div>
           )}
         </Container>

@@ -50,6 +50,8 @@ export default function App() {
       
       setMeta("description", data.description);
       setMeta("keywords", data.keywords);
+      setMeta("classification", "Business");
+      setMeta("astract", data.full_name);
     }
   }, [data]);
 
