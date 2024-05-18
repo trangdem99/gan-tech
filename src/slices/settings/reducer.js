@@ -81,8 +81,8 @@ export default createSlice({
           "data": _action.payload?.data?.setting ? {
             "short_name": _action.payload.data.setting.short_name ?? initialState.setting.short_name,
             "full_name": _action.payload.data.setting.full_name ?? initialState.setting.full_name,
-            "logo": _action.payload.data.setting.logo ?? initialState.setting.logo,
-            "favicon": _action.payload.data.setting.favicon ?? initialState.setting.favicon,
+            "logo": _action.payload.data.setting.logo ? process.env.PUBLIC_URL + _action.payload.data.setting.logo : initialState.setting.logo,
+            "favicon": _action.payload.data.setting.favicon ? process.env.PUBLIC_URL + _action.payload.data.setting.favicon : initialState.setting.favicon,
             "description": {
               "short_content": _action.payload.data.setting.description.short_content ?? initialState.setting.description.short_content,
               "full_content": _action.payload.data.setting.description.full_content ?? initialState.setting.description.full_content,
@@ -94,7 +94,7 @@ export default createSlice({
             "products": _action.payload.data.setting.products ? _action.payload.data.setting.products.map((product) => ({
               "name": product.name ?? initialState.product.name,
               "slug": product.slug ?? initialState.product.slug,
-              "image": product.image ?? initialState.product.image,
+              "image": product.image ? process.env.PUBLIC_URL + product.image : initialState.product.image,
               "description": {
                 "title": product.description.title ?? initialState.product.description.title,
                 "short_content": product.description.short_content ?? initialState.product.description.short_content,
@@ -104,7 +104,7 @@ export default createSlice({
             "services": _action.payload.data.setting.services ? _action.payload.data.setting.services.map((service) => ({
               "name": service.name ?? initialState.service.name,
               "slug": service.slug ?? initialState.service.slug,
-              "image": service.image ?? initialState.service.image,
+              "image": service.image ? process.env.PUBLIC_URL + service.image : initialState.service.image,
               "description": {
                 "title": service.description.title ?? initialState.service.description.title,
                 "short_content": service.description.short_content ?? initialState.service.description.short_content,
@@ -113,7 +113,7 @@ export default createSlice({
             })) : initialState.setting.services,
             "carousels": _action.payload.data.setting.carousels ? _action.payload.data.setting.carousels.map((carousel) => ({ 
               "name": carousel.name ?? initialState.carousel.name,
-              "image": carousel.image ?? initialState.carousel.image 
+              "image": carousel.image ? process.env.PUBLIC_URL + carousel.image : initialState.carousel.image,
             })) : initialState.setting.carousels,
           } : initialState.setting,
           "msg": initialState.msg,

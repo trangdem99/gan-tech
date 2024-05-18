@@ -24,6 +24,9 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Copy .env-production to .env
+      run: cp .env-production .env
+
     - name: Build project
       run: npm run build
 
@@ -38,5 +41,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npm install -g gh-pages
-        npm run build
-        gh-pages -d build -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        gh-pages -d build

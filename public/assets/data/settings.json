@@ -5,8 +5,8 @@
     "setting": {
       "short_name": "GAN Tech",
       "full_name": "GAN Tech",
-      "logo": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp",
-      "favicon": "https://trangdem99.github.io/gan-tech/assets/images/favicons/favicon.webp",
+      "logo": "/assets/images/logo.webp",
+      "favicon": "/assets/images/favicons/favicon.webp",
       "description": {
         "short_content": "<h5>Công ty TNHH ABC</h5><p>MST: 1234567890</p><p>Giấy chứng nhận đăng ký kinh doanh số: 1234567890 do Sở Kế hoạch và Đầu tư TP.HCM cấp lần đầu ngày 01/01/2021</p>",
         "full_content": "<h1 class=\"mb-4\">CÔNG TY TNHH CÔNG NGHỆ GAN</h1>\n<p class=\"lead mb-4\">Chuyên nghiên cứu, thiết kế, phát triển và sản xuất các sản phẩm vi mạch điện tử, các thiết bị Power Supply, Charger, IoT device, được ứng dụng rộng rãi trong Công nghiệp, Nông nghiệp, Viễn thông và Dân dụng.</p>\n<p class=\"mb-4\">Các giải pháp và sản phẩm của Công ty đã và đang được thiết kế và sản xuất đáp ứng tốt nhu cầu của khách hàng, được khách hàng đánh giá cao cả về chất lượng cũng như dịch vụ hậu mãi.</p>\n<p class=\"mb-4\">Với đội ngũ kỹ sư và kỹ thuật viên dày dặn kinh nghiệm, các sản phẩm đều được nghiên cứu, thiết kế và sản xuất với quy trình hoàn chỉnh, linh phụ kiện chính hãng từ các thương hiệu nổi tiếng như Infineon, NXP, STM, Onsemi, Amphenol, Nordic... Các sản phẩm được kiểm tra, kiểm soát chặt chẽ đảm bảo chất lượng trước khi tới tay khách hàng.</p>\n<p class=\"mb-4\">Ngày nay, với đội ngũ cán bộ và nhân viên trình độ cao, các sản phẩm liên tục được cải tiến, nâng cao độ tin cậy, áp dụng các công nghệ tiên tiến nhất để đáp ứng nhu cầu của quý khách hàng.</p>"
@@ -18,15 +18,15 @@
       "carousels": [
         {
           "name": "Carousel 1",
-          "image": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp"
+          "image": "/assets/images/logo.webp"
         },
         {
           "name": "Carousel 2",
-          "image": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp"
+          "image": "/assets/images/logo.webp"
         },
         {
           "name": "Carousel 3",
-          "image": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp"
+          "image": "/assets/images/logo.webp"
         }
       ],
       "products": [
@@ -65,7 +65,7 @@
         {
           "name": "Service 1",
           "slug": "service-1",
-          "image": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp",
+          "image": "/assets/images/logo.webp",
           "description": {
             "title": "Design & manufacture of high power LED Drivers",
             "short_content": "<p>Specializing in OEM design and production of LED Driver products</p><p>Ability to work continuously, IP67 water resistance, 3 year warranty</p><p>Integrated smart control via WIFI/BLE/LORA/4G</p>",
@@ -75,7 +75,7 @@
         {
           "name": "Service 2",
           "slug": "service-2",
-          "image": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp",
+          "image": "/assets/images/logo.webp",
           "description": {
             "title": "Design and manufacture Wireless products",
             "short_content": "<p>Specializing in OEM design and production of wireless, 4G, WIFI, BLE module products</p><p>Design capacity meets EMC requirements according to international standards</p><p>Manufactures commercial products for wireless connectivity and control monitoring</p>",
@@ -85,7 +85,7 @@
         {
           "name": "Service 3",
           "slug": "service-3",
-          "image": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp",
+          "image": "/assets/images/logo.webp",
           "description": {
             "title": "Design & manufacture charger, UPS backup AC/DC",
             "short_content": "<p>Specialized in OEM design and production of emergency storage power products</p><p>Ability to work continuously, 5 year warranty</p><p>Integrated smart battery charging circuit that automatically shuts off and switches power for the device</p>",
@@ -95,7 +95,7 @@
         {
           "name": "Service 4",
           "slug": "service-4",
-          "image": "https://trangdem99.github.io/gan-tech/assets/images/logo.webp",
+          "image": "/assets/images/logo.webp",
           "description": {
             "title": "Solutions for IoT monitoring & tracking",
             "short_content": "<p>Specializing in manufacturing 4G, WIFI, BLE products for monitoring and control applications</p><p>4G/Lora/Nb-IoT monitoring cloud system</p><p>Real-time online monitoring - online warnings</p>",

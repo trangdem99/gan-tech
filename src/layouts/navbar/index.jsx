@@ -57,7 +57,7 @@ export default function NavBar() {
         <Navbar className="mx-5" expand="lg">
           <NavbarBrand className="col-3">
             <Link to="/" style={linkStyle}>
-              <img src="./assets/images/logo.webp" alt="GAN Tech" width="80" height="32"></img>
+              <img src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} alt="Logo" />
             </Link>
           </NavbarBrand>
           

@@ -32,22 +32,19 @@ export default function Homepage() {
   ))
 
   const next = () => {
-    if (activeIndex === data.carousels.length - 1) {
-      setActiveIndex(0);
-    } else {
-      setActiveIndex(activeIndex + 1);
-    }
+    if (animating) return;
+    const nextIndex = activeIndex === data.carousels.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
   }
 
   const previous = () => {
-    if (activeIndex === 0) {
-      setActiveIndex(data.carousels.length - 1);
-    } else {
-      setActiveIndex(activeIndex - 1);
-    }
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? data.carousels.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
   }
 
   const goToIndex = (newIndex) => {
+    if (animating) return;
     setActiveIndex(newIndex);
   }
 

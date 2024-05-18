@@ -19,7 +19,7 @@ const store = configureStore({
 
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={"/" + process.env.PUBLIC_URL.split("/").pop()}>
       <App />
     </BrowserRouter>
   </Provider>
