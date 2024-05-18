@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "https://trangdem99.github.io/gan-tech/static/css/main.41081411.css",
-    "main.js": "https://trangdem99.github.io/gan-tech/static/js/main.bafd84fc.js",
+    "main.js": "https://trangdem99.github.io/gan-tech/static/js/main.e6bf7efa.js",
     "index.html": "https://trangdem99.github.io/gan-tech/index.html",
     "main.41081411.css.map": "https://trangdem99.github.io/gan-tech/static/css/main.41081411.css.map",
-    "main.bafd84fc.js.map": "https://trangdem99.github.io/gan-tech/static/js/main.bafd84fc.js.map"
+    "main.e6bf7efa.js.map": "https://trangdem99.github.io/gan-tech/static/js/main.e6bf7efa.js.map"
   },
   "entrypoints": [
     "static/css/main.41081411.css",
-    "static/js/main.bafd84fc.js"
+    "static/js/main.e6bf7efa.js"
   ]
 }
