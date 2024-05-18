@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --base=/gan-tech",
+    "help": "react-scripts --help",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://trangdem99.github.io",
+  "homepage": "https://trangdem99.github.io/gan-tech",
   "author": "trangdem99",
   "license": "MIT",
   "dependencies": {
