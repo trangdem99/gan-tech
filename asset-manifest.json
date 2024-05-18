@@ -1,21 +1,13 @@
 {
   "files": {
     "main.css": "https://trangdem99.github.io/gan-tech/static/css/main.41081411.css",
-    "main.js": "https://trangdem99.github.io/gan-tech/static/js/main.35be0d86.js",
-    "static/js/443.bd9f9549.chunk.js": "https://trangdem99.github.io/gan-tech/static/js/443.bd9f9549.chunk.js",
-    "static/js/107.d6d9dc07.chunk.js": "https://trangdem99.github.io/gan-tech/static/js/107.d6d9dc07.chunk.js",
-    "static/js/928.6374835e.chunk.js": "https://trangdem99.github.io/gan-tech/static/js/928.6374835e.chunk.js",
-    "static/js/480.562b8cc3.chunk.js": "https://trangdem99.github.io/gan-tech/static/js/480.562b8cc3.chunk.js",
+    "main.js": "https://trangdem99.github.io/gan-tech/static/js/main.bafd84fc.js",
     "index.html": "https://trangdem99.github.io/gan-tech/index.html",
     "main.41081411.css.map": "https://trangdem99.github.io/gan-tech/static/css/main.41081411.css.map",
-    "main.35be0d86.js.map": "https://trangdem99.github.io/gan-tech/static/js/main.35be0d86.js.map",
-    "443.bd9f9549.chunk.js.map": "https://trangdem99.github.io/gan-tech/static/js/443.bd9f9549.chunk.js.map",
-    "107.d6d9dc07.chunk.js.map": "https://trangdem99.github.io/gan-tech/static/js/107.d6d9dc07.chunk.js.map",
-    "928.6374835e.chunk.js.map": "https://trangdem99.github.io/gan-tech/static/js/928.6374835e.chunk.js.map",
-    "480.562b8cc3.chunk.js.map": "https://trangdem99.github.io/gan-tech/static/js/480.562b8cc3.chunk.js.map"
+    "main.bafd84fc.js.map": "https://trangdem99.github.io/gan-tech/static/js/main.bafd84fc.js.map"
   },
   "entrypoints": [
     "static/css/main.41081411.css",
-    "static/js/main.35be0d86.js"
+    "static/js/main.bafd84fc.js"
   ]
 }
