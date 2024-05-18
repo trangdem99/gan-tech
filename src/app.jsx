@@ -41,10 +41,12 @@ export default function App() {
     <Loader />
   ) : (
     <React.Fragment>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/gioi-thieu" element={<Introduction />} />
-      </Routes>
+      <React.Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/gioi-thieu" element={<Introduction />} />
+        </Routes>
+      </React.Suspense>
     </React.Fragment>
   );
 };

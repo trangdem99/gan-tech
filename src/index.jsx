@@ -9,8 +9,7 @@ import './assets/css/style.css';
 
 import rootReducer from "./slices";
 
-const Loader = React.lazy(() => import('./components/loader'));
-const App = React.lazy(() => import('./app'));
+import App from './app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore({
@@ -21,9 +20,7 @@ const store = configureStore({
 root.render(
   <Provider store={store}>
     <BrowserRouter>
-      <React.Suspense fallback={<Loader />}>
-        <App />
-      </React.Suspense>
+      <App />
     </BrowserRouter>
   </Provider>
 );
