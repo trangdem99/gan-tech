@@ -44,7 +44,7 @@
         ]
       },
       "services": {
-        "title": "Dịch vụ",
+        "title": "GAN TECHNOLOGY COMPANY LIMITED",
         "image": "/assets/images/services.webp",
         "content": "<div class=\"service-section\"><h2>Tư vấn, thiết kế và sản xuất các sản phẩm điện – điện tử theo yêu cầu khách hàng</h2><ul><li>Đáp ứng các yêu cầu kỹ thuật của khách hàng</li><li>Khả năng đáp ứng được sản lượng lớn</li><li>Sản phẩm có thể đạt được các chứng chỉ UL, CE, CCC.</li></ul></div><div class=\"service-section\"><h2>Cung cấp các linh kiện điện tử chính hãng</h2><p>Cung cấp các linh kiện điện tử chính hãng như MCU, IC, Gate Driver, Led Driver, Fan, Mosfet, IGBT, Transistor, Module GPS, Module 4G, …. Của các hãng như Analog Devices, Texas Instrument, STM, Onsemi, Quectel, Nordic, Semtech…</p></div>"
       }
