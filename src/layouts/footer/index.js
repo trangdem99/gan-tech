@@ -10,7 +10,7 @@ import {
   useSelector,
 } from "react-redux";
 import {
-  createSelector 
+  createSelector
 } from "@reduxjs/toolkit";
 
 export default function Footer() {
@@ -32,7 +32,10 @@ export default function Footer() {
               xs="12"
               md="4"
             >
-              <div dangerouslySetInnerHTML={{ "__html": data.description.short_content }}></div>
+              <h5>Thông tin</h5>
+              <p>{data.full_name}</p>
+              <p>MST: {data.tax_code}</p>
+              <p>{data.business_registration}</p>
             </Col>
             <Col
               xs="12"

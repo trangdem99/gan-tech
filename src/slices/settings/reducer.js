@@ -1,5 +1,5 @@
 import {
-  createSlice 
+  createSlice
 } from "@reduxjs/toolkit"
 import {
   getSetting,
@@ -7,45 +7,31 @@ import {
 
 const initialState = {
   "product": {
-    "name": "",
-   "slug": "",
-   "image": "",
-   "description": {
-      "title": "",
-      "short_content": "",
-      "full_content": ""
-    }
-  },
-  "service": {
-    "name": "",
-   "slug": "",
-   "image": "",
-   "description": {
-      "title": "",
-      "short_content": "",
-      "full_content": ""
-    }
-  },
-  "carousel": {
-    "name": "",
-    "image": ""
+    "image": [],
+    "content": "",
   },
   "setting": {
     "short_name": "",
     "full_name": "",
     "logo": "",
     "favicon": "",
-    "description": {
-      "short_content": "",
-      "full_content": ""
-    },
+    "tax_code": "",
+    "business_registration": "",
     "keywords": "",
     "address": "",
     "phone": "",
     "email": "",
-    "products": [],
-    "services": [],
-    "carousels": [],
+    "homepage": {
+      "title": "",
+      "image": "",
+      "content": "",
+      "products": [],
+    },
+    "services": {
+      "title": "",
+      "image": "",
+      "content": "",
+    },
   },
   "is_success": false,
   "is_loading": false,
@@ -83,38 +69,26 @@ export default createSlice({
             "full_name": _action.payload.data.setting.full_name ?? initialState.setting.full_name,
             "logo": _action.payload.data.setting.logo ? process.env.REACT_APP_PUBLIC_URL + _action.payload.data.setting.logo : initialState.setting.logo,
             "favicon": _action.payload.data.setting.favicon ? process.env.REACT_APP_PUBLIC_URL + _action.payload.data.setting.favicon : initialState.setting.favicon,
-            "description": {
-              "short_content": _action.payload.data.setting.description.short_content ?? initialState.setting.description.short_content,
-              "full_content": _action.payload.data.setting.description.full_content ?? initialState.setting.description.full_content,
-            },
+            "tax_code": _action.payload.data.setting.tax_code ?? initialState.setting.tax_code,
+            "business_registration": _action.payload.data.setting.business_registration ?? initialState.setting.business_registration,
             "keywords": _action.payload.data.setting.keywords ?? initialState.setting.keywords,
             "address": _action.payload.data.setting.address ?? initialState.setting.address,
             "phone": _action.payload.data.setting.phone ?? initialState.setting.phone,
             "email": _action.payload.data.setting.email ?? initialState.setting.email,
-            "products": _action.payload.data.setting.products ? _action.payload.data.setting.products.map((product) => ({
-              "name": product.name ?? initialState.product.name,
-              "slug": product.slug ?? initialState.product.slug,
-              "image": product.image ? process.env.REACT_APP_PUBLIC_URL + product.image : initialState.product.image,
-              "description": {
-                "title": product.description.title ?? initialState.product.description.title,
-                "short_content": product.description.short_content ?? initialState.product.description.short_content,
-                "full_content": product.description.full_content ?? initialState.product.description.full_content,
-              }
-            })) : initialState.setting.products,
-            "services": _action.payload.data.setting.services ? _action.payload.data.setting.services.map((service) => ({
-              "name": service.name ?? initialState.service.name,
-              "slug": service.slug ?? initialState.service.slug,
-              "image": service.image ? process.env.REACT_APP_PUBLIC_URL + service.image : initialState.service.image,
-              "description": {
-                "title": service.description.title ?? initialState.service.description.title,
-                "short_content": service.description.short_content ?? initialState.service.description.short_content,
-                "full_content": service.description.full_content ?? initialState.service.description.full_content,
-              }
-            })) : initialState.setting.services,
-            "carousels": _action.payload.data.setting.carousels ? _action.payload.data.setting.carousels.map((carousel) => ({ 
-              "name": carousel.name ?? initialState.carousel.name,
-              "image": carousel.image ? process.env.REACT_APP_PUBLIC_URL + carousel.image : initialState.carousel.image,
-            })) : initialState.setting.carousels,
+            "homepage": _action.payload.data.setting.homepage ? {
+              "title": _action.payload.data.setting.homepage.title ?? initialState.setting.homepage.title,
+              "image": _action.payload.data.setting.homepage.image ? process.env.REACT_APP_PUBLIC_URL + _action.payload.data.setting.homepage.image : initialState.setting.homepage.image,
+              "content": _action.payload.data.setting.homepage.content ?? initialState.setting.homepage.content,
+              "products": _action.payload.data.setting.homepage.products.map((product) => ({
+                "content": product.content ?? initialState.product.content,
+                "images": product.images ? product.images.map((image) => process.env.REACT_APP_PUBLIC_URL + image) : initialState.product.image,
+              })),
+            } : initialState.setting.homepage,
+            "services": _action.payload.data.setting.services ? {
+              "title": _action.payload.data.setting.services.title ?? initialState.setting.services.title,
+              "image": _action.payload.data.setting.services.image ? process.env.REACT_APP_PUBLIC_URL + _action.payload.data.setting.services.image : initialState.setting.services.image,
+              "content": _action.payload.data.setting.services.content ?? initialState.setting.services.content,
+            } : initialState.setting.services,
           } : initialState.setting,
           "msg": initialState.msg,
           "is_submitting": initialState.is_submitting,

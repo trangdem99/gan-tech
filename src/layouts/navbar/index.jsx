@@ -8,10 +8,6 @@ import {
   NavItem,
   NavbarBrand,
   Navbar,
-  DropdownMenu,
-  DropdownToggle,
-  DropdownItem,
-  UncontrolledDropdown,
   NavbarToggler,
   Offcanvas,
   OffcanvasHeader,
@@ -24,7 +20,7 @@ import {
   useSelector,
 } from "react-redux";
 import {
-  createSelector 
+  createSelector
 } from "@reduxjs/toolkit";
 import Image from '../../components/image';
 
@@ -56,10 +52,10 @@ export default function NavBar() {
     <React.Fragment>
       <div className="bg-white sticky-top justify-items-center">
         <Navbar className="mx-5" expand="lg">
-          <NavbarBrand className="col-3" tag={Link} to="/" style={linkStyle}>
+          <NavbarBrand className="col-4" tag={Link} to="/" style={linkStyle}>
             <Image src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} width="80" height="32" alt="logo" />
           </NavbarBrand>
-          
+
           <NavbarToggler onClick={toggle} />
 
           <Offcanvas isOpen={is_open} toggle={toggle} direction="end">
@@ -71,91 +67,41 @@ export default function NavBar() {
                     Trang chủ
                   </NavLink>
                 </NavItem>
-                <NavItem active={location.pathname === "/gioi-thieu"}>
-                  <NavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
-                    Giới thiệu
+                <NavItem active={location.pathname === "/dich-vu"}>
+                  <NavLink tag={Link} to="/dich-vu" style={linkStyle}>
+                    Dịch vụ
                   </NavLink>
                 </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret className={location.pathname.includes("/san-pham") ? "active" : ""}>
-                    Sản phẩm
-                  </DropdownToggle>
-                  <DropdownMenu end>
-                    <DropdownItem tag={Link} to="/san-pham" style={linkStyle}>
-                      Tất cả sản phẩm
-                    </DropdownItem>
-                    {data.products.map((product, index) => (
-                      <DropdownItem key={`product-${index}`} tag={Link} to={`/san-pham/${product.slug}`} style={linkStyle}>
-                        {product.name}
-                      </DropdownItem>
-                    ))}
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret className={location.pathname.includes("/dich-vu") ? "active" : ""}>
-                    Dịch vụ
-                  </DropdownToggle>
-                  <DropdownMenu end>
-                    <DropdownItem tag={Link} to="/dich-vu" style={linkStyle}>
-                      Tất cả dịch vụ
-                    </DropdownItem>
-                    {data.services.map((service, index) => (
-                      <DropdownItem key={`service-${index}`} tag={Link} to={`/dich-vu/${service.slug}`} style={linkStyle}>
-                        {service.name}
-                      </DropdownItem>
-                    ))}
-                  </DropdownMenu>
-                </UncontrolledDropdown>
+                <NavItem active={location.pathname === "/blog"}>
+                  <NavLink tag={Link} to="/blog" style={linkStyle}>
+                    Blog
+                  </NavLink>
+                </NavItem>
               </Nav>
             </OffcanvasBody>
           </Offcanvas>
 
-          <Nav className="d-none d-md-flex col-6 my-2 my-lg-0 justify-content-center" navbar>
+          <Nav className="d-none d-md-flex col-4 my-2 my-lg-0 justify-content-center" navbar>
             <NavItem active={location.pathname === "/"}>
               <NavLink tag={Link} to="/" style={linkStyle}>
                 Trang chủ
               </NavLink>
             </NavItem>
-            <NavItem active={location.pathname === "/gioi-thieu"}>
-              <NavLink tag={Link} to="/gioi-thieu" style={linkStyle}>
-                Giới thiệu
+            <NavItem active={location.pathname === "/dich-vu"}>
+              <NavLink tag={Link} to="/dich-vu" style={linkStyle}>
+                Dịch vụ
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className={location.pathname.includes("/san-pham") ? "active" : ""}>
-                Sản phẩm
-              </DropdownToggle>
-              <DropdownMenu end>
-                <DropdownItem tag={Link} to="/san-pham" style={linkStyle}>
-                  Tất cả sản phẩm
-                </DropdownItem>
-                {data.products.map((product, index) => (
-                  <DropdownItem key={`product-${index}`} tag={Link} to={`/san-pham/${product.slug}`} style={linkStyle}>
-                    {product.name}
-                  </DropdownItem>
-                ))}
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className={location.pathname.includes("/dich-vu") ? "active" : ""}>
-                Dịch vụ
-              </DropdownToggle>
-              <DropdownMenu end>
-                <DropdownItem tag={Link} to="/dich-vu" style={linkStyle}>
-                  Tất cả dịch vụ
-                </DropdownItem>
-                {data.services.map((service, index) => (
-                  <DropdownItem key={`service-${index}`} tag={Link} to={`/dich-vu/${service.slug}`} style={linkStyle}>
-                    {service.name}
-                  </DropdownItem>
-                ))}
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavItem active={location.pathname === "/blog"}>
+              <NavLink tag={Link} to="/blog" style={linkStyle}>
+                Blog
+              </NavLink>
+            </NavItem>
           </Nav>
 
-          <div className="d-none d-md-block col-3 text-end">
-            Address: {data.address} <br />
-            Phone: {data.phone}
+          <div className="d-none d-md-block col-4 text-end">
+            Đ/c: {data.address} <br />
+            Sđt: {data.phone}
           </div>
         </Navbar>
       </div>

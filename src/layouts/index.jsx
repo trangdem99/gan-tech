@@ -25,7 +25,7 @@ export default function Layout(props) {
 
     return () => {
       window.onscroll = null;
-      
+
       scrollToTopButton.removeEventListener("click", () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -35,11 +35,14 @@ export default function Layout(props) {
 
   return (
     <React.Fragment>
-      <NavBar />
-      {props.children}
-      <Footer />
+      <div className="d-flex flex-column min-vh-100">
+        <NavBar />
+        <div className="flex-grow-1">
+          {props.children}</div>
+        <Footer />
 
-      <Button className="scrollToTop" title="Go to top">&#8593;</Button>
+        <Button className="scrollToTop" title="Go to top">&#8593;</Button>
+      </div>
     </React.Fragment>
   );
 }

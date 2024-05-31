@@ -1,11 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
-  Button,
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
   Col,
   Container,
   Row,
@@ -18,11 +12,9 @@ import { createSelector } from "@reduxjs/toolkit";
 import Image from '../../components/image';
 import Layout from '../../layouts';
 
-import './index.css'; // Import the custom CSS file
+import './index.css';
 
-export default function Products() {
-  // State to track the number of visible items
-  const [visibleItems, setVisibleItems] = React.useState(8);
+export default function Services() {
   const { data } = useSelector(createSelector(
     state => state.Settings,
     (state) => ({
@@ -30,38 +22,29 @@ export default function Products() {
     })
   ));
 
-  // Handle "Show More" button click
-  const showMoreItems = () => {
-    setVisibleItems(prevVisibleItems => prevVisibleItems + 8);
-  };
-
   return (
     <React.Fragment>
       <Layout>
-        <Container className="p-1 p-sm-2 p-md-3 p-lg-4" id="main">
-          <Row>
-            {
-              data.services.slice(0, visibleItems).map((service, index) => (
-                <Col xs="12" sm="6" md="4" lg="3" className="mb-3" key={`service-${index}`}>
-                  <Card className="equal-height-card">
-                    <Image src={service.image} alt={service.name} className="img-fluid" />
-                    <CardBody className="d-flex flex-column">
-                      <CardTitle>{service.name}</CardTitle>
-                      <CardText className="flex-grow-1" dangerouslySetInnerHTML={{ __html: service.description.short_content }} />
-                      <div className="text-center">
-                        <Link to={`/dich-vu/${service.slug}`} className="btn btn-primary">Xem chi tiết</Link>
-                      </div>
-                    </CardBody>
-                  </Card>
-                </Col>
-              ))
-            }
+        <Container fluid className="p-0">
+          <Row className="justify-content-center m-0">
+            <Col xs="12" className="full-screen-image p-0">
+              <Image src={data.services.image} alt={data.short_name} className="img-fluid" />
+              <center>
+                <div className="caption-container">
+                  <h2>{data.services.title}</h2>
+                </div>
+              </center>
+            </Col>
           </Row>
-          {visibleItems < data.services.length && (
-            <div className="text-center mt-3">
-              <Button onClick={showMoreItems} color="primary">Hiển thị thêm</Button>
-            </div>
-          )}
+        </Container>
+
+        <Container className="mt-5 mb-5">
+          <Row>
+            <Col xs="12">
+              <h1 className="text-center brand-color">{data.services.title}</h1>
+              <div dangerouslySetInnerHTML={{ __html: data.services.content }}></div>
+            </Col>
+          </Row>
         </Container>
       </Layout>
     </React.Fragment>

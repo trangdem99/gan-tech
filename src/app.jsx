@@ -7,7 +7,7 @@ import {
   useDispatch,
 } from "react-redux";
 import {
-  createSelector 
+  createSelector
 } from "@reduxjs/toolkit";
 
 //import actions
@@ -19,11 +19,8 @@ import setMeta from './utils/setMeta';
 import Loader from './components/loader';
 
 const Homepage = React.lazy(() => import('./pages/homepage'));
-const Introduction = React.lazy(() => import('./pages/introduction'));
-const Products = React.lazy(() => import('./pages/products'));
-const ProductDetail = React.lazy(() => import('./pages/products/details'));
 const Services = React.lazy(() => import('./pages/services'));
-const ServiceDetail = React.lazy(() => import('./pages/services/details'));
+const Blogs = React.lazy(() => import('./pages/blogs'));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -47,7 +44,7 @@ export default function App() {
   React.useEffect(() => {
     if (is_success) {
       document.title = data.full_name;
-      
+
       setMeta("description", data.description);
       setMeta("keywords", data.keywords);
       setMeta("classification", "Business");
@@ -62,11 +59,8 @@ export default function App() {
       <React.Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/gioi-thieu" element={<Introduction />} />
-          <Route path="/san-pham" element={<Products />} />
-          <Route path="/san-pham/:slug" element={<ProductDetail />} />
           <Route path="/dich-vu" element={<Services />} />
-          <Route path="/dich-vu/:slug" element={<ServiceDetail />} />
+          <Route path="/blog" element={<Blogs />} />
         </Routes>
       </React.Suspense>
     </React.Fragment>
