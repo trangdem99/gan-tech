@@ -126,7 +126,7 @@ h4 {
 .content-list li {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .content-list li strong {
@@ -144,16 +144,6 @@ h4 {
 
 .content-list li u {
   text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .content-section {
-    font-size: 1rem;
-  }
-
-  .content-list li {
-    font-size: 1rem;
-  }
 }
 
 .section {

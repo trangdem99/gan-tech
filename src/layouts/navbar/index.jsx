@@ -26,8 +26,7 @@ import Image from '../../components/image';
 
 // Custom CSS class for links
 const linkStyle = {
-  textDecoration: 'none',
-  color: 'rgba(var(--bs-emphasis-color-rgb), 0.65)',
+  fontSize: '1.25rem',
 };
 
 export default function NavBar() {
@@ -53,7 +52,7 @@ export default function NavBar() {
       <div className="bg-white sticky-top justify-items-center">
         <Navbar className="mx-5 my-3" expand="lg">
           <NavbarBrand className="col-4" tag={Link} to="/" style={linkStyle}>
-            <Image src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} width="120" height="48" alt="logo" />
+            <Image src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} width="240" height="96" alt="logo" />
           </NavbarBrand>
 
           <NavbarToggler onClick={toggle} />
@@ -62,17 +61,17 @@ export default function NavBar() {
             <OffcanvasHeader toggle={toggle}>Menu</OffcanvasHeader>
             <OffcanvasBody>
               <Nav className="me-auto my-2 my-lg-0 mx-auto" navbar>
-                <NavItem active={location.pathname === "/"}>
+                <NavItem active={location.pathname === "/"} className="mx-2">
                   <NavLink tag={Link} to="/" style={linkStyle}>
                     Trang chủ
                   </NavLink>
                 </NavItem>
-                <NavItem active={location.pathname === "/dich-vu"}>
+                <NavItem active={location.pathname === "/dich-vu"} className="mx-2">
                   <NavLink tag={Link} to="/dich-vu" style={linkStyle}>
                     Dịch vụ
                   </NavLink>
                 </NavItem>
-                <NavItem active={location.pathname === "/blog"}>
+                <NavItem active={location.pathname === "/blog"} className="mx-2">
                   <NavLink tag={Link} to="/blog" style={linkStyle}>
                     Blog
                   </NavLink>
@@ -82,17 +81,17 @@ export default function NavBar() {
           </Offcanvas>
 
           <Nav className="d-none d-md-flex col-4 my-2 my-lg-0 justify-content-center" navbar>
-            <NavItem active={location.pathname === "/"}>
+            <NavItem active={location.pathname === "/"} className="mx-2">
               <NavLink tag={Link} to="/" style={linkStyle}>
                 Trang chủ
               </NavLink>
             </NavItem>
-            <NavItem active={location.pathname === "/dich-vu"}>
+            <NavItem active={location.pathname === "/dich-vu"} className="mx-2">
               <NavLink tag={Link} to="/dich-vu" style={linkStyle}>
                 Dịch vụ
               </NavLink>
             </NavItem>
-            <NavItem active={location.pathname === "/blog"}>
+            <NavItem active={location.pathname === "/blog"} className="mx-2">
               <NavLink tag={Link} to="/blog" style={linkStyle}>
                 Blog
               </NavLink>
@@ -100,8 +99,8 @@ export default function NavBar() {
           </Nav>
 
           <div className="d-none d-md-block col-4 text-end">
-            <Link to="/dang-nhap" className="btn btn-light">Đăng nhập</Link>
-            <Link to="/lien-he" className="btn btn-primary ms-2">Liên hệ</Link>
+            <Link to="/dang-nhap" className="btn btn-light" style={linkStyle}>Đăng nhập</Link>
+            <Link to="/lien-he" className="btn btn-primary ms-2" style={linkStyle}>Liên hệ</Link>
           </div>
         </Navbar>
       </div>
