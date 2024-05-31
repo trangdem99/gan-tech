@@ -32,7 +32,7 @@ export default function Footer() {
               xs="12"
               md="4"
             >
-              <h5>Thông tin</h5>
+              <h3>Thông tin</h3>
               <p>{data.full_name}</p>
               <p>MST: {data.tax_code}</p>
               <p>{data.business_registration}</p>
@@ -42,7 +42,7 @@ export default function Footer() {
               md="4"
               className="offset-md-2"
             >
-              <h5>Liên hệ</h5>
+              <h3>Liên hệ</h3>
               <p>Địa chỉ: {data.address}</p>
               <p>Điện thoại: {data.phone}</p>
               <p>Email: {data.email}</p>

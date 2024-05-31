@@ -51,9 +51,9 @@ export default function NavBar() {
   return (
     <React.Fragment>
       <div className="bg-white sticky-top justify-items-center">
-        <Navbar className="mx-5" expand="lg">
+        <Navbar className="mx-5 my-3" expand="lg">
           <NavbarBrand className="col-4" tag={Link} to="/" style={linkStyle}>
-            <Image src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} width="80" height="32" alt="logo" />
+            <Image src={process.env.PUBLIC_URL + "/assets/images/logo.webp"} width="120" height="48" alt="logo" />
           </NavbarBrand>
 
           <NavbarToggler onClick={toggle} />
@@ -100,8 +100,8 @@ export default function NavBar() {
           </Nav>
 
           <div className="d-none d-md-block col-4 text-end">
-            Đ/c: {data.address} <br />
-            Sđt: {data.phone}
+            <Link to="/dang-nhap" className="btn btn-light">Đăng nhập</Link>
+            <Link to="/lien-he" className="btn btn-primary ms-2">Liên hệ</Link>
           </div>
         </Navbar>
       </div>

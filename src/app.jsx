@@ -21,6 +21,8 @@ import Loader from './components/loader';
 const Homepage = React.lazy(() => import('./pages/homepage'));
 const Services = React.lazy(() => import('./pages/services'));
 const Blogs = React.lazy(() => import('./pages/blogs'));
+const Contact = React.lazy(() => import('./pages/contact'));
+const SignIn = React.lazy(() => import('./pages/sign-in'));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -61,6 +63,8 @@ export default function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/dich-vu" element={<Services />} />
           <Route path="/blog" element={<Blogs />} />
+          <Route path="/lien-he" element={<Contact />} />
+          <Route path="/dang-nhap" element={<SignIn />} />
         </Routes>
       </React.Suspense>
     </React.Fragment>
