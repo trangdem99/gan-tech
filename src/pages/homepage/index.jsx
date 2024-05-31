@@ -58,7 +58,7 @@ export default function Homepage() {
             <Container className="mt-5 mb-5" key={`product-${product_index}`}>
               <Row>
                 <Col xs="12">
-                  <h1 className="text-center brand-color" dangerouslySetInnerHTML={{ __html: product.content }}></h1>
+                  <h1 className="brand-color" dangerouslySetInnerHTML={{ __html: product.content }}></h1>
                   <Row className="mt-3 justify-content-center">
                     {
                       product.images.map((image, image_index) => (

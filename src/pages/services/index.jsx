@@ -12,8 +12,6 @@ import { createSelector } from "@reduxjs/toolkit";
 import Image from '../../components/image';
 import Layout from '../../layouts';
 
-import './index.css';
-
 export default function Services() {
   const { data } = useSelector(createSelector(
     state => state.Settings,
